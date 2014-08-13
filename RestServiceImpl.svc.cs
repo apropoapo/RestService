@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.IO;
 
 namespace RestService
 {
@@ -21,6 +22,28 @@ namespace RestService
 "1;Hoffman;Tatyana;88;1.32;af;ca;Nam@quisdiamluctus.org;1;17/04/2012\n" +
 "2;Atkins;Ishmael;44;1.42;am;uk;arcu.et.pede@musProin.ca;1;12/01/2011\n" +
 "3;Hamilton;Mohammad;73;1.22;eu;fr;dui@duiCras.edu;0;25/09/2012\n";
+
+    
+
+            string datei;
+            try
+            {
+                FileStream fs = new FileStream(@"F:\test_WebService\RestService\RestService\demo.csv", FileMode.Open);
+                StreamReader sr = new StreamReader(fs);
+                datei = sr.ReadToEnd();
+
+                fs.Close();
+                sr.Close();
+            }
+            catch (IOException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                
+            }
+            
 
             //string xml = "<table><metadata>";
 
@@ -47,7 +70,7 @@ namespace RestService
 
             //xml += "</data></table>";
             //return xml;
-            return csv;
+            return datei;
         }
 
 
