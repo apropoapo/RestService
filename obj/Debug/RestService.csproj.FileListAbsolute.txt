@@ -1,0 +1,4 @@
+F:\test_WebService\RestService\RestService\bin\RestService.dll
+F:\test_WebService\RestService\RestService\bin\RestService.pdb
+F:\test_WebService\RestService\RestService\obj\Debug\RestService.dll
+F:\test_WebService\RestService\RestService\obj\Debug\RestService.pdb
